@@ -1,4 +1,19 @@
 <div align="center">
-  <h1> <%= @player_1_name %> punched <%= @player_2_name %> in the face! WTF?! </h1>
+  <h1> <%= @player_1.name %> punched <%= @player_2.name %> in the face! WTF?! </h1>
   <img src='http://i.imgur.com/23pJ3sz.gif'>
+
+  <div>
+    <%= @player_2.name %> has <%= @player_2.hp %>HP left
+  </div>
+
+  <form action= "/attack" >
+    <div>
+      <label for = "player_1_name"><%= @player_1.name %>, fancy attacking <%= @player_2.name %>?</label>
+      <br>
+      <input type="submit" value = "Attack!" style="font-family:'Orator Std'; color: white; font-size: 25px; height: 75; width: 235px; background-color: #000000;"/>
+    </div>
+  </form>
+
 </div>
+
+<audio src="http://www.youtube.com/watch?v=Fewr21hNGYA"></audio>
