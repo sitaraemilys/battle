@@ -2,7 +2,7 @@ require_relative 'player'
 
 class Game
 
-  attr_reader :player_1, :player_2, :current_turn
+  attr_reader :current_turn
 
   def initialize(player_1, player_2)
     @players = [player_1, player_2]

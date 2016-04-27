@@ -3,7 +3,7 @@
 describe 'Switch turns' do
 
   context 'seeing the current turn' do
-    scenario 'at the start o the game' do
+    scenario 'at the start of the game' do
       sign_in_and_play
       expect(page).to have_content "Hanna's turn"
     end
