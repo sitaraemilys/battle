@@ -3,6 +3,7 @@ require 'player'
 describe Player do
   subject (:sity) { Player.new('Sity') }
   subject (:chris) { Player.new('Chris') }
+  subject (:loser) { Player.new('Loser', 10) }
 
   describe '#name' do
     it 'returns the name' do
@@ -14,6 +15,9 @@ describe Player do
     it 'returns the hit points' do
       expect(sity.hit_points).to eq described_class::DEFAULT_HIT_POINTS
     end
+    it 'returns a lose message when 0 hit points' do
+      expect{loser.receive_damage}.to raise_error 'You lose Loser'
+    end
   end
 
   describe '#receive_damage' do
@@ -21,4 +25,6 @@ describe Player do
       expect { chris.receive_damage }.to change { chris.hit_points }.by(-10)
     end
   end
+
+
 end
