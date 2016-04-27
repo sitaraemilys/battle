@@ -1,1 +1,20 @@
- <%= @player_1_name %> vs. <%= @player_2_name %> 
+<div align="center">
+  <h1>
+    <%= @player_1_name %> vs. <%= @player_2_name %>
+  </h1>
+  <div>
+    <%= @player_1_name %> has 60HP
+  </div>
+  <div>
+    <%= @player_2_name %> has 60HP
+  </div>
+
+
+   <form action= "/attack" >
+     <div>
+       <label for = "player_1_name"><%= @player_1_name %>, fancy attacking <%= @player_2_name %>?</label>
+       <br>
+       <input type="submit" value = "Attack!" style="font-family:'Orator Std'; color: white; font-size: 25px; height: 75; width: 235px; background-color: #000000;"/>
+     </div>
+   </form>
+</div>
