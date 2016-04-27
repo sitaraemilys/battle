@@ -3,13 +3,16 @@
   <img src='http://i.imgur.com/23pJ3sz.gif'>
 
   <div>
+    <%= @game.player_1.name %> has <%= @game.player_1.hp %>HP left
+    <br>
     <%= @game.player_2.name %> has <%= @game.player_2.hp %>HP left
   </div>
 
   <form action= "/attack" >
     <div>
-      <label for = "player_1_name"><%= @game.player_1.name %>, fancy attacking <%= @game.player_2.name %>?</label>
+      <label for = "Attack back"><%= @game.player_2.name %>, get up and do something you lazy S.O.B!</label>
       <br>
+      <% @game.switch %>
       <input type="submit" value = "Attack!" style="font-family:'Orator Std'; color: white; font-size: 25px; height: 75; width: 235px; background-color: #000000;"/>
     </div>
   </form>
