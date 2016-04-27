@@ -1,4 +1,3 @@
-require 'spec_helper'
 
 feature 'attacks a player' do
   scenario 'attacks player 2' do

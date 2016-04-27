@@ -1,4 +1,3 @@
-require 'spec_helper'
 
 feature 'view players hit points' do
   scenario 'view player 2s hit points' do
