@@ -1,9 +1,11 @@
 class Game
-  attr_reader :player_1, :player_2
+  attr_reader :player_1, :player_2, :attacker, :defender
 
   def initialize player_1, player_2
     @player_1 = player_1
     @player_2 = player_2
+    @attacker = player_1
+    @defender = player_2
   end
 
   def whallop player
@@ -11,9 +13,18 @@ class Game
   end
 
   def switch
-    temp = @player_1
-    @player_1 = @player_2
-    @player_2 = temp
+    attack
+    defend
+  end
+
+  private
+
+  def attack
+    @attacker == player_1 ? @attacker = player_2 : @attacker = player_1
+  end
+
+  def defend
+    @defender == player_2 ? @defender = player_1 : @defender = player_2
   end
 
 

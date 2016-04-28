@@ -6,12 +6,19 @@ describe Game do
   let(:ross) {double :player, name: "ross"}
   subject(:game) {described_class.new bob, ross}
 
-  it "has a player 1" do
-    expect(game.player_1).to eq bob
-  end
+  describe "#initialize" do
 
-  it "has a player 2" do
-    expect(game.player_2).to eq ross
+    it "has a player 1" do
+      expect(game.player_1).to eq bob
+    end
+
+    it "has a player 2" do
+      expect(game.player_2).to eq ross
+    end
+
+    it "assigns an initial attacker" do
+      expect(game.attacker).to eq bob
+    end
   end
 
   describe "#whallop" do
@@ -22,11 +29,17 @@ describe Game do
   end
 
   describe "#switch" do
-      it "swaps player 1 and player 2" do
+
+      it "attacker equals player_2" do
         game.switch
-        expect(game.player_1).to be ross
-        expect(game.player_2).to be bob
+        expect(game.attacker).to eq ross
       end
+
+      it "defender equals player_1" do
+        game.switch
+        expect(game.defender).to eq bob
+      end
+
   end
-  
+
 end
