@@ -11,7 +11,7 @@ feature 'attacks a player' do
   scenario 'other players turn to attack' do
     sign_in_and_play
     click_button 'Attack!'
-    expect(page).to have_content 'Ross, get up and do something you lazy S.O.B!'
+    expect(page).to have_content 'Ross YOU PUSSY, YOU GOT HIT. WHAT YO GONNA DO?'
 
   end
 
