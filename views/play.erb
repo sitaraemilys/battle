@@ -1,21 +1,23 @@
-<body background="bgimage.jpg">
+<body background="http://data.whicdn.com/images/150288560/large.jpg">
 <div align="center">
-  <h1>
-    <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
+    <font face="courier new" size="6" color = "FFFF00">
+    <h1>
+  <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
   </h1>
+</font>
   <div>
-    <%= @game.player_1.name %> has 60HP
+    <font face="courier new" size="5">
+    <label for = "player_1_name"><b> <%= @game.player_1.name %>:60 bananas
   </div>
   <div>
-    <%= @game.player_2.name %> has 60HP
+    <%= @game.player_2.name %>:60 bananas
   </div>
-
-
    <form action= "/attack" >
      <div>
-       <label for = "player_1_name"><%= @game.player_1.name %>, fancy attacking <%= @game.player_2.name %>?</label>
+       <label for= "player_1_name"><%= @game.player_1.name %> do you want to tickle <%= @game.player_2.name %>?</label>
        <br>
-       <input type="submit" value = "Attack!" style="font-family:'Orator Std'; color: white; font-size: 25px; height: 75; width: 235px; background-color: #000000;"/>
+       <input type="submit" value = "TICKLE!" style="font-family:'courier new'; color:yellow; font-size: 25px; height: 75; width: 330px; background-color: #000000"/>
      </div>
    </form>
+   </font>
 </div>

@@ -1,21 +1,22 @@
-<div align="center">
-
-  <h1> <%= @game.player_1.name %> punched <%= @game.player_2.name %> in the face! WTF?! </h1>
-  <img src='http://i.imgur.com/23pJ3sz.gif'>
-
+<body background="http://data.whicdn.com/images/150288560/large.jpg">
+  <div align="center">
+    <font face="courier new" size="4">
+    <h1> <%= @game.player_1.name %> tickled <%= @game.player_2.name %> till he wet himself! </h1>
+    <h1> HE HE HE </h1>
+  <img src='http://24.media.tumblr.com/130f821e0c1c0ba7490622aa870ffe96/tumblr_n4iuliOlHb1tziei6o1_500.gif'>
   <div>
-    <%= @game.player_1.name %> has <%= @game.player_1.hp %>HP left
+    <%= @game.player_1.name %>:<%= @game.player_1.hp %> bananas
     <br>
-    <%= @game.player_2.name %> has <%= @game.player_2.hp %>HP left
+    <%= @game.player_2.name %>:<%= @game.player_2.hp %> bananas
   </div>
 
   <form action= "/attack" >
     <div>
-      <label for = "Attack back"><%= @game.defender.name %> YOU PUSSY, YOU GOT HIT. WHAT YO GONNA DO? </label>
+      <label for = "Tickle back"><%= @game.defender.name %>, are you going to just stand there and let <%= @game.attacker.name %> tickle you?! go on, tickle them back! </label>
       <br>
       <% @game.switch %>
-      <input type="submit" value = "Attack!" style="font-family:'Orator Std'; color: white; font-size: 25px; height: 75; width: 235px; background-color: #000000;"/>
+      <input type="submit" value = "TICKLE!" style="font-family:'courier new'; color:yellow; font-size: 25px; height: 75; width: 330px; background-color: #000000"/>
     </div>
   </form>
-
 </div>
+<iframe width="0" height="0" src="hhttps://www.youtube.com/embed/IJSRYEqSjzw" frameborder=”0″ allowfullscreen></iframe>

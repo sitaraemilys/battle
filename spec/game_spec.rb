@@ -41,7 +41,7 @@ describe Game do
 
   describe "#game_over?" do
     it "checks if either player is dead" do
-      #couldnt figure this out sity, soz
+      
     end
   end
 
