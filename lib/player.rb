@@ -6,6 +6,7 @@ class Player
   def initialize name
     @name = name
     @hp = DEFAULT_HP
+    # @alive = true
   end
 
   def been_hit
@@ -14,6 +15,10 @@ class Player
 
   def whallop player
     player.been_hit
+  end
+
+  def dead?
+    @hp == 0
   end
 
 end

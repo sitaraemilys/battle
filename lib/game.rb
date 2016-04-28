@@ -6,6 +6,7 @@ class Game
     @player_2 = player_2
     @attacker = player_1
     @defender = player_2
+
   end
 
   def whallop player
@@ -16,6 +17,11 @@ class Game
     attack
     defend
   end
+
+  def game_over?
+    @player_1.dead? || @player_2.dead?
+  end
+
 
   private
 

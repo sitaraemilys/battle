@@ -7,7 +7,6 @@ describe Game do
   subject(:game) {described_class.new bob, ross}
 
   describe "#initialize" do
-
     it "has a player 1" do
       expect(game.player_1).to eq bob
     end
@@ -29,17 +28,23 @@ describe Game do
   end
 
   describe "#switch" do
+    it "attacker equals player_2" do
+      game.switch
+      expect(game.attacker).to eq ross
+    end
 
-      it "attacker equals player_2" do
-        game.switch
-        expect(game.attacker).to eq ross
-      end
-
-      it "defender equals player_1" do
-        game.switch
-        expect(game.defender).to eq bob
-      end
-
+    it "defender equals player_1" do
+      game.switch
+      expect(game.defender).to eq bob
+    end
   end
+
+  describe "#game_over?" do
+    it "checks if either player is dead" do
+      #couldnt figure this out sity, soz
+    end
+  end
+
+
 
 end

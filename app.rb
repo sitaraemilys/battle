@@ -25,11 +25,11 @@ class Battle < Sinatra::Base
   get '/attack' do
     @game = $game
     @game.whallop @game.defender
-    erb :attack
+    @game.game_over? ? erb(:loser) : erb(:attack)
   end
 
-  get '/some/path' do
-
+  get '/loser' do
+    erb :loser
   end
 
   # start the server if ruby file executed directly

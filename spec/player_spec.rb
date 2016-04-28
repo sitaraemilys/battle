@@ -27,7 +27,13 @@ describe Player do
       end
     end
 
+    describe "#dead" do
 
-
+      it "dead returns true" do
+        6.times { bob.been_hit }
+        expect(bob.dead?).to be true
+      end
+      
+    end
 
 end
