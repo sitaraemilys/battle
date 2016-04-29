@@ -5,7 +5,7 @@ describe Game do
 
   let(:bob) {double :player, name: "bob"}
   let(:ross) {double :player, name: "ross"}
-  let(:loser) {Player.new("loser", 10)}
+  let(:loser) {Player.new("loser", 1)}
   subject(:game) {described_class.new bob, ross}
   subject(:loser_game) {described_class.new loser, ross}
 

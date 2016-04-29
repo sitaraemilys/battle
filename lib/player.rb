@@ -10,7 +10,7 @@ class Player
   end
 
   def been_hit
-    @hp -= 10
+    @hp -= rand(10)+1
   end
 
   def whallop player
@@ -18,7 +18,11 @@ class Player
   end
 
   def dead?
-    @hp == 0
+    @hp <= 0
+  end
+
+  def eat_bananas
+    @hp += rand(15)
   end
 
 end

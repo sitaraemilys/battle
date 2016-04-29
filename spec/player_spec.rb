@@ -15,7 +15,8 @@ describe Player do
     end
 
     describe "#been_hit" do
-      it "reduces HP by 10" do
+      it "reduces HP" do
+        allow(bob).to receive(:rand).and_return 9
         expect{bob.been_hit}.to change{bob.hp}.by -10
       end
     end
@@ -28,12 +29,16 @@ describe Player do
     end
 
     describe "#dead" do
-
       it "dead returns true" do
-        6.times { bob.been_hit }
+        100.times { bob.been_hit }
         expect(bob.dead?).to be true
       end
-      
     end
+    describe "#eat_bananas" do
+      it "adds hitpoints" do
+        allow(bob).to receive(:rand).and_return 10
+        expect{bob.eat_bananas}.to change{bob.hp}.by 10
+      end
 
+    end
 end
