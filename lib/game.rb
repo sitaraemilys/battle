@@ -6,7 +6,14 @@ class Game
     @player_2 = player_2
     @attacker = player_1
     @defender = player_2
+  end
 
+  def self.create(player_1, player_2)
+    @game = Game.new(player_1, player_2)
+  end
+
+  def self.instance
+    @game
   end
 
   def whallop player
@@ -21,6 +28,7 @@ class Game
   def game_over?
     @player_1.dead? || @player_2.dead?
   end
+
 
   private
 
