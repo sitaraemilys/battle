@@ -29,6 +29,9 @@ class Game
     @player_1.dead? || @player_2.dead?
   end
 
+  def healing(player)
+    player.eat_bananas
+  end
 
   private
 

@@ -13,10 +13,6 @@ class Player
     @hp -= rand(10)+1
   end
 
-  def whallop player
-    player.been_hit
-  end
-
   def dead?
     @hp <= 0
   end

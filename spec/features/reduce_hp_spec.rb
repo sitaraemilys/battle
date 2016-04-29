@@ -2,7 +2,7 @@
 feature 'reduces players hp' do
 
 
-  scenario 'after attack' do
+  xscenario 'after attack' do
     allow(Kernel).to receive(:rand).and_return(9)
     sign_in_and_play
     5.times { tickle }

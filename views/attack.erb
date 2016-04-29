@@ -1,24 +1,27 @@
 <body background="http://data.whicdn.com/images/150288560/large.jpg">
   <div align="center">
-    <font face="courier new" size="4">
+    <font face="courier new" size="6" color = "FFFF00">
     <h1> <%= @game.player_1.name %> tickled <%= @game.player_2.name %> till <%= @game.player_2.name %> peed! </h1>
     <h1> HE HE HE </h1>
+  </font>
+  <font face="courier new" style="font-size: 20px;color: black">
   <img src='http://24.media.tumblr.com/130f821e0c1c0ba7490622aa870ffe96/tumblr_n4iuliOlHb1tziei6o1_500.gif'>
-  <div>
-    <%= @game.player_1.name %>has<%= @game.player_1.hp %> bananas
-    <br>
-    <%= @game.player_2.name %>has<%= @game.player_2.hp %> bananas
-  </div>
   <form action= "/attack" >
     <div>
-      <label for = "Tickle back"><b><%= @game.defender.name %>, are you going to just stand there and let <%= @game.attacker.name %> tickle you?! go on, tickle <%= @game.attacker.name %> back!</b></label>
+      <label for = "Tickle back" style="font-size: 26px"><b><%= @game.defender.name %>, are you going to just stand there and let <%= @game.attacker.name %> tickle you?! go on, tickle <%= @game.attacker.name %> back!</b></label>
       <br>
       <% @game.switch %>
       <input type="submit" value = "TICKLE!" style="font-family:'courier new'; color:yellow; font-size: 25px; height: 75; width: 330px; background-color: #000000"/>
     </div>
   </form>
 </div>
+</font>
+  <font face="courier new" style="font-size: 20px;color: black">
+<div align="center">
+  <h1> or do you want to do something else cheeky to them? </h1>
 <form action='/play'>
-  <input type='submit' value='OK' style="font-family:'courier new'; font-weight: bold; color:black; font-size: 30px; height: 75; width: 330px; background-color: yellow;margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%">
+  <input type='submit' value='OK' style="font-family:'courier new'; font-weight: bold; color:black; font-size: 30px; height: 75; width: 330px; background-color:yellow">
 </form>
 <iframe width="0" height="0" src="https://www.youtube.com/embed/IJSRYEqSjzw?autoplay=1" frameborder=”0″ allowfullscreen></iframe>
+</font>
+</div>
