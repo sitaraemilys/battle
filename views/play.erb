@@ -7,16 +7,23 @@
 </font>
   <div>
     <font face="courier new" size="5">
-    <label for = "player_1_name"><b> <%= @game.player_1.name %>:60 bananas
+    <label for = "player_1_name"><b> <%= @game.player_1.name %>:<%= @game.player_1.hp %> bananas
   </div>
   <div>
-    <%= @game.player_2.name %>:60 bananas
+    <%= @game.player_2.name %>:<%= @game.player_2.hp %> bananas
   </div>
    <form action= "/attack" >
      <div>
-       <label for= "player_1_name"><%= @game.player_1.name %> do you want to tickle <%= @game.player_2.name %>?</label>
+       <%= @game.player_1.name %> do you want to tickle <%= @game.player_2.name %>?</label>
        <br>
        <input type="submit" value = "TICKLE!" style="font-family:'courier new'; color:yellow; font-size: 25px; height: 75; width: 330px; background-color: #000000"/>
+     </div>
+   </form>
+   <form action= "/healing" >
+     <div>
+       <label for= "player_1_name"><%= @game.player_1.name %> do you want to eat a banana and get more in your tummy?</label>
+       <br>
+       <input type="submit" value = "BANANA!" style="font-family:'courier new'; color:yellow; font-size: 25px; height: 75; width: 330px; background-color: #000000"/>
      </div>
    </form>
    </font>

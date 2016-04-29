@@ -5,9 +5,9 @@
     <h1> HE HE HE </h1>
   <img src='http://24.media.tumblr.com/130f821e0c1c0ba7490622aa870ffe96/tumblr_n4iuliOlHb1tziei6o1_500.gif'>
   <div>
-    <%= @game.player_1.name %>:<%= @game.player_1.hp %> bananas
+    <%= @game.player_1.name %>has<%= @game.player_1.hp %> bananas
     <br>
-    <%= @game.player_2.name %>:<%= @game.player_2.hp %> bananas
+    <%= @game.player_2.name %>has<%= @game.player_2.hp %> bananas
   </div>
   <form action= "/attack" >
     <div>
@@ -18,5 +18,7 @@
     </div>
   </form>
 </div>
-
+<form action='/play'>
+  <input type='submit' value='OK' style="font-family:'courier new'; font-weight: bold; color:black; font-size: 30px; height: 75; width: 330px; background-color: yellow;margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%">
+</form>
 <iframe width="0" height="0" src="https://www.youtube.com/embed/IJSRYEqSjzw?autoplay=1" frameborder=”0″ allowfullscreen></iframe>

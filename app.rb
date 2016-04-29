@@ -24,7 +24,7 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
-    @game.whallop @game.defender
+    @game.whallop(@game.defender)
     @game.game_over? ? erb(:loser) : erb(:attack)
   end
 
