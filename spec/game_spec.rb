@@ -1,10 +1,13 @@
 require 'game'
+require 'player'
 
 describe Game do
 
   let(:bob) {double :player, name: "bob"}
   let(:ross) {double :player, name: "ross"}
+  let(:loser) {Player.new("loser", 10)}
   subject(:game) {described_class.new bob, ross}
+  subject(:loser_game) {described_class.new loser, ross}
 
   describe "#initialize" do
     it "has a player 1" do
@@ -41,10 +44,8 @@ describe Game do
 
   describe "#game_over?" do
     it "checks if either player is dead" do
-      
+      loser.been_hit
+      expect(loser_game.game_over?).to eq true
     end
   end
-
-
-
 end

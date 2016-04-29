@@ -3,9 +3,9 @@ class Player
 
   DEFAULT_HP = 60
 
-  def initialize name
+  def initialize name, hp=DEFAULT_HP
     @name = name
-    @hp = DEFAULT_HP
+    @hp = hp
     # @alive = true
   end
 

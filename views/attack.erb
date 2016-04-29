@@ -9,10 +9,9 @@
     <br>
     <%= @game.player_2.name %>:<%= @game.player_2.hp %> bananas
   </div>
-
   <form action= "/attack" >
     <div>
-      <label for = "Tickle back"><%= @game.defender.name %>, are you going to just stand there and let <%= @game.attacker.name %> tickle you?! go on, tickle them back! </label>
+      <label for = "Tickle back"><b><%= @game.defender.name %>, are you going to just stand there and let <%= @game.attacker.name %> tickle you?! go on, tickle <%= @game.attacker.name %> back!</b></label>
       <br>
       <% @game.switch %>
       <input type="submit" value = "TICKLE!" style="font-family:'courier new'; color:yellow; font-size: 25px; height: 75; width: 330px; background-color: #000000"/>

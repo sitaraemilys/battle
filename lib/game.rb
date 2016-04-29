@@ -22,7 +22,6 @@ class Game
     @player_1.dead? || @player_2.dead?
   end
 
-
   private
 
   def attack
