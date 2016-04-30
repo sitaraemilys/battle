@@ -1,4 +1,5 @@
-## Battle
+Battle
+===
 
 Implement a battle game that uses the following technologies:
 * HTTP
@@ -6,8 +7,8 @@ Implement a battle game that uses the following technologies:
 * Sinatra
 * Capybara
 
-Features
-====
+## Features
+
 * Start a fight by entering names
 * See both player's hit points and names
 * Switch turns
